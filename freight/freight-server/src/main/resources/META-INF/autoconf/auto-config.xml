@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config description="application-properties">
+
+    <group name="application-properties">
+
+    </group>
+
+    <script>
+        <generate template="application.properties" charset="UTF-8"/>
+    </script>
+</config>
