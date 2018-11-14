@@ -1,0 +1,10 @@
+*.iml
+*.pid
+bin
+/target/
+.classpath
+.project
+settings
+.idea*
+*.DS_Store
+LOG_HOME_IS_UNDEFINED
