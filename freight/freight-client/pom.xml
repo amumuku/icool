@@ -11,7 +11,7 @@
     <groupId>com.general.freight</groupId>
     <artifactId>freight-client</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>freight</name>
+    <name>freight-client</name>
     <packaging>jar</packaging>
    <url>http://maven.apache.org</url>
     <dependencies>
