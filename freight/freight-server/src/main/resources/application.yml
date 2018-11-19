@@ -4,6 +4,8 @@ server:
 management:
   port: 7002
 spring:
+    application:
+          name: freight
     datasource:
         name: test
         url:
@@ -34,21 +36,30 @@ spring:
     #注册中心地址，zookeeper集群，启动输出可以看见链接了多个
     #单zookeeper服务：zookeeper://127.0.0.1:2181
         registry:
-          address:
+          address: zookeeper://116.196.123.27:2181
     #暴露服务方式
         protocol:
           id: dubbo
     #默认名称，勿修改
           name: dubbo
     #暴露服务端口 （默认是20880，修改端口，不同的服务提供者端口不能重复）
-          port: 20881
+          port: 20880
           status : server
     #调用dubbo组建扫描的项目路径
-        scan: com.general.freight.server.impl
+        scan: com.general.freight.server
 ## 该配置节点为独立的节点，有很多同学容易将这个配置放在spring的节点下，导致配置无法被识别
 mybatis:
   mapper-locations: classpath:mapping/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
   type-aliases-package: com.general.freight.dal.bean  # 注意：对应实体类的路径
+
+
+dubbo:
+    consume:
+      dolphin-version: 1.0.0
+      part-version: 1.0.0.daily
+
+
+
 
 
 
