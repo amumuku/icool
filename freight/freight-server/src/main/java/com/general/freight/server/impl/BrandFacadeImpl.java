@@ -1,14 +1,10 @@
 package com.general.freight.server.impl;
 
-import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.general.freight.client.BrandFacade;
-import com.tqmall.dolphin.dubbo.CustomerDubboService;
+import com.general.dolphin.dubbo.CustomerDubboService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.DependsOn;
-import org.springframework.stereotype.Component;
 
 /**
  * @classname BrandFacadeImpl
