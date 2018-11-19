@@ -16,11 +16,22 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class BrandTestDemo extends BaseTest {
 
 	@Autowired
-	private BrandMapper brandMapper;
+	BrandFacade brandFacade;
 
+	@Autowired
+	InventoryRemoteService inventoryRemoteService;
 	@Test
 	public void test() {
-		Brand brand = brandMapper.selectByPrimaryKey(26);
-		System.out.println(brand.getBrandName()+"***************");
+		String dolphinTest = brandFacade.getSayHelloWorld();
+		System.out.println(dolphinTest);
+
+	}
+	@Test
+	public void test2() {
+		InventoryQueryDtoParam queryDtoParam = new InventoryQueryDtoParam();
+		queryDtoParam.setShopId(50954);
+		Result<List<InventoryDto>> result = inventoryRemoteService.getInventoryListByParam(queryDtoParam);
+		System.out.println(JSONUtils.toJSONString(result.getData()));
+
 	}
 }
